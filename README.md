@@ -16,6 +16,7 @@ Also the order of the list is changed every time before being displayed.
 ## TESTS
 Tests done with **PyTest** which is an built in test module. To run just write pytest within
 directory.
+**Added** CI is added to run tests when push to master.
 
 ## AUTHOR
 Richard Fehling, student at EC Utbildning, MVT22<br/>

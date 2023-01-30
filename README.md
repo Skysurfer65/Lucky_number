@@ -14,8 +14,8 @@ removed already after first guess.
 Also the order of the list is changed every time before being displayed.
 
 ## TESTS
-Tests done with **PyTest** which is an built in test module. To run just write pytest within
-directory.
+Tests done with **PyTest** test module, make sure it's installed to run locally.
+To run just write pytest within directory.
 **Added** CI is added to run tests when push to master.
 
 ## AUTHOR

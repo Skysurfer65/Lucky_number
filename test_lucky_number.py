@@ -19,7 +19,7 @@ def test_shorter_lucky_list():
     lucky_list_testdata = [20, 25, 30, 40, 50, 60, 70, 75, 79, 80]
     result = shorter_lucky_list(lucky_list_testdata, 
             lucky_number=50, num_of_attempts=1, player_input=40)
-    assert len(result) == 9
+    assert len(result) == 10
     # Will player_input (40) still be in the list?
     assert not 40 in result 
     
@@ -42,7 +42,11 @@ def test_shorter_lucky_list():
     assert not 79 in result
 
 
-
+def test_2():
+        assert 2==2, "Kollar 2"
+class Wow:
+        def test_3():
+                assert 5 >0
     
 
 

@@ -1,3 +1,4 @@
+import pytest
 from lucky_number_Richard_Fehling import shorter_lucky_list
 
 # Test of shorter list function

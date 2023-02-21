@@ -14,9 +14,24 @@ permissions:
 
 jobs:
   build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        cache: 'pip' # caching pip dependencies
+    - run: pip install -r requirements.txt
 
     runs-on: ubuntu-latest
-
+  test:
+    needs: [build]
+    name: Test on ${{ matrix.os }}
+    
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macOS-latest]
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.10
@@ -36,4 +51,4 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest test_lucky_number.py --verbose 
+        pytest --verbose test_lucky_number.py 

@@ -26,7 +26,7 @@ jobs:
         pip install --upgrade pip
         pip install -r requirements.txt
 
-  test:
+  test1:
     needs: [build]
     name: Test on ${{ matrix.os }}
     
@@ -47,8 +47,8 @@ jobs:
     - name: Test with pytest
       run: |
         pytest --verbose test_lucky_number.py 
-  test:
-    needs: [test]
+  test2:
+    needs: [test1]
     name: Code check
 
     runs-on: ubuntu-latest

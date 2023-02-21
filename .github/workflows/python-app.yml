@@ -48,7 +48,7 @@ jobs:
       run: |
         pytest --verbose test_lucky_number.py 
   test:
-    needs: [build]
+    needs: [test]
     name: Code check
 
     runs-on: ubuntu-latest
